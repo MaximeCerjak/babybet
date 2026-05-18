@@ -13,8 +13,8 @@ const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 
 const LOTS = {
   sexe:   "Une tablée pour deux chez le chef Max !",
-  poids:  "Le poids de bébé en chocolat !",
-  taille: "Une bouteille de champagne !",
+  poids:  "Le poids de bébé en gros sel de Noirmoutier (et salicornes, miam) !",
+  taille: "On vous invite à boir un coup !",
 };
 const LOTS_IMG = {
   sexe:   lotSexe,
@@ -564,7 +564,7 @@ export default function App() {
             <BetCard title="Le poids" icon={Scales} lot={LOTS.poids} lotKey="poids" done={currentBet.poids && parseFloat(currentBet.poids) >= 1}>
               <input type="number" step="0.05" min="1" max="6" placeholder="3.30" value={currentBet.poids}
                 onChange={e => setCurrentBet(b => ({ ...b, poids: e.target.value }))} style={inputSt()} />
-              <p style={{ fontSize:"0.78rem", color:"#8B7B74", marginTop:6 }}>En kilogrammes · Tolérance ± 100g</p>
+              <p style={{ fontSize:"0.78rem", color:"#8B7B74", marginTop:6 }}>En kilogrammes · Tolérance ± 10g</p>
             </BetCard>
             <BetCard title="La taille" icon={Ruler} lot={LOTS.taille} lotKey="taille" done={currentBet.taille && parseInt(currentBet.taille) >= 30}>
               <input type="number" step="1" min="30" max="65" placeholder="50" value={currentBet.taille}
