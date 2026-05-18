@@ -14,7 +14,7 @@ const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 const LOTS = {
   sexe:   "Une tablée pour deux chez le chef Max !",
   poids:  "Le poids de bébé en gros sel de Noirmoutier (et salicornes, miam) !",
-  taille: "On vous invite à boir un coup !",
+  taille: "On vous invite à boire un coup !",
 };
 const LOTS_IMG = {
   sexe:   lotSexe,
@@ -389,7 +389,7 @@ export default function App() {
   };
 
   const handleAdmin = () => {
-    if (adminCode === "bebe2025") { setAdminMode(true); setAdminCode(""); setAdminError(false); }
+    if (adminCode === "bebe2026") { setAdminMode(true); setAdminCode(""); setAdminError(false); }
     else setAdminError(true);
   };
 
@@ -502,7 +502,6 @@ export default function App() {
                       <button onClick={handleAdmin} style={btnG({ flexShrink:0 })}>OK</button>
                     </div>
                     {adminError && <p style={{ fontSize:"0.8rem", color:"#E57373", marginTop:6 }}>Code incorrect</p>}
-                    <p style={{ fontSize:"0.75rem", color:"#8B7B74", marginTop:8 }}>Code par défaut : <strong>bebe2025</strong></p>
                   </>
                 ) : (
                   <>
